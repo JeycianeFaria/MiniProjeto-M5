@@ -44,6 +44,12 @@ public class ControllerAdvisor {
         return new MensagemErro(exception.getMessage());
     }
 
+    @ExceptionHandler(JogoNaoEncontradoException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public MensagemErro manipularJogoNaoEncontrado (JogoNaoEncontradoException exception) {
+        return new MensagemErro(exception.getMessage());
+    }
+
 
 
 }
