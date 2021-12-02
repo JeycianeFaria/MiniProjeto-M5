@@ -56,6 +56,14 @@ public class ControllerAdvisor {
         return new MensagemErro(exception.getMessage());
     }
 
+    @ExceptionHandler(UsuarioNaoEncontradoException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public MensagemErro manipularUsuarioNaoEncontrado (UsuarioNaoEncontradoException exception) {
+        return new MensagemErro(exception.getMessage());
+    }
+
+
+
 
 
 }
