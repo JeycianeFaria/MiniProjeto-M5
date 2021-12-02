@@ -26,6 +26,12 @@ public class ControllerAdvisor {
         return errosValidacao;
     }
 
+    @ExceptionHandler(CodigoInvalidoException.class)
+    @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
+    public MensagemErro manipularCodigoInvalido(CodigoInvalidoException exception) {
+        return new MensagemErro(exception.getMessage());
+    }
+
 
 
 }
