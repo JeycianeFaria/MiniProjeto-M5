@@ -32,6 +32,18 @@ public class ControllerAdvisor {
         return new MensagemErro(exception.getMessage());
     }
 
+    @ExceptionHandler(DataPosteriorException.class)
+    @ResponseStatus()
+    public MensagemErro manipularDataPosterior (DataPosteriorException exception) {
+        return new MensagemErro(exception.getMessage());
+    }
+
+    @ExceptionHandler(EmailJaCadastradoException.class)
+    @ResponseStatus()
+    public MensagemErro manipularEmailJaCadastrado (EmailJaCadastradoException exception) {
+        return new MensagemErro(exception.getMessage());
+    }
+
 
 
 }
