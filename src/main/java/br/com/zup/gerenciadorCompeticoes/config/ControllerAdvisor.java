@@ -1,5 +1,6 @@
 package br.com.zup.gerenciadorCompeticoes.config;
 
+import br.com.zup.gerenciadorCompeticoes.exceptions.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -25,4 +26,9 @@ public class ControllerAdvisor {
         return errosValidacao;
     }
 
+
+
 }
+
+
+
