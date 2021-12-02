@@ -50,6 +50,12 @@ public class ControllerAdvisor {
         return new MensagemErro(exception.getMessage());
     }
 
+    @ExceptionHandler(PontosInsuficientesException.class)
+    @ResponseStatus(HttpStatus.NOT_ACCEPTABLE)
+    public MensagemErro manipularPontosInsuficientes (PontosInsuficientesException exception) {
+        return new MensagemErro(exception.getMessage());
+    }
+
 
 
 }
